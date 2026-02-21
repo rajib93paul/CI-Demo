@@ -1,0 +1,24 @@
+name:Python CI
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    build-test:
+        runs-on: ubuntu-latest
+        
+        steps:
+        - name: check-out code
+          uses: actions/checkout@v4 
+
+        - name: Setting up python for my app.py
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.10'
+
+        - name: install dependencies
+          run: |
+
+        - name: run the tests
+          run: pytest -v
