@@ -17,8 +17,6 @@ jobs:
           with:
             python-version: '3.10'
 
-        - name: install dependencies
-          run: |
-
+        
         - name: run the tests
           run: pytest -v
